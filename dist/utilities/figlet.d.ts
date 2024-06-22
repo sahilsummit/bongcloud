@@ -1,0 +1,1 @@
+//# sourceMappingURL=figlet.d.ts.map

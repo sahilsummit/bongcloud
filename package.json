@@ -10,6 +10,7 @@
   "bin": {
     "my-cli-toolkit": "dist/index.js"
   },
+  "type": "module",
   "keywords": [],
   "homepage": "https://github.com/sahilsummit/bongcloud#readme",
   "author": "sahil-jaura",

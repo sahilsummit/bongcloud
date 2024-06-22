@@ -5,7 +5,7 @@ export const askQuestion = async (
   message: string,
   type: QUESTION_TYPES,
   choices?: string[],
-  name: string = 'question',
+  name: string = "question"
 ): Promise<any> => {
   const answers = await inquirer.prompt({
     name: name,

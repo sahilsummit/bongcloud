@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-declare const greet: (name: string) => void;
+export {};
 //# sourceMappingURL=index.d.ts.map

@@ -1,0 +1,21 @@
+{
+  "name": "bongcloud",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "bin": {
+    "my-cli-toolkit": "dist/index.js"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/sahilsummit/bongcloud#readme",
+  "author": "sahil-jaura",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  }
+}

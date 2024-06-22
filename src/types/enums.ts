@@ -1,10 +1,9 @@
 export const DEFAULT_SLEEP_TIME = 2;
 
-export const ANIMATION_TYPES = [
-  "rainbow",
-  "pulse",
-  "glitch",
-  "radar",
-  "neon",
-  "karaoke",
-];
+export enum ANIMATION_TYPES {
+  RAINBOW = "rainbow",
+  PULSE = "pulse",
+  GLITCH = "glitch",
+  NEON = "neon",
+  RADAR = "radar",
+}

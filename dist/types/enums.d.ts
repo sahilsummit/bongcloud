@@ -1,3 +1,9 @@
 export declare const DEFAULT_SLEEP_TIME = 2;
-export declare const ANIMATION_TYPES: string[];
+export declare enum ANIMATION_TYPES {
+    RAINBOW = "rainbow",
+    PULSE = "pulse",
+    GLITCH = "glitch",
+    NEON = "neon",
+    RADAR = "radar"
+}
 //# sourceMappingURL=enums.d.ts.map

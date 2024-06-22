@@ -1,1 +1,1 @@
-{"version":3,"file":"gradient.d.ts","sourceRoot":"","sources":["../../src/utilities/gradient.ts"],"names":[],"mappings":""}
+{"version":3,"file":"gradient.d.ts","sourceRoot":"","sources":["../../src/utilities/gradient.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,cAAc,EAAE,MAAM,mBAAmB,CAAC;AAEnD,eAAO,MAAM,YAAY,SACjB,MAAM,SACN,cAAc,WAIrB,CAAC"}

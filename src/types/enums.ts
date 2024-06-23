@@ -58,6 +58,9 @@ export const MESSAGES = {
     "🎁✨ Dive into our delightful menu and pick your favorite treat from the list below! \n",
   LANGUAGE_SELECTION: "To which language you wanna translate?",
   TEXT_TO_BE_TRANSLATTED: "Type in what you wanna translate..",
+  TEXT_SIZE_ERROR: "Text size limit error",
+  LOADING: "Loading....",
+  STILL_IN_PROGRESS: "Still in progress... 🙂",
 };
 
 export const MODULE_TYPES = {
@@ -69,16 +72,10 @@ export const MODULE_TYPES = {
   HANGMAN: "Play hangman",
   NOTIFICATION: "Send notification to the author",
   LINKEDIN: "View the author's linkedin",
+  EXIT: "Exit",
 };
 
 export const moduleList = Object.values(MODULE_TYPES);
-
-export const LANGUAGE_TYPES = {
-  HINDI: "Hindi",
-  PUNJABI: "Punjabi",
-};
-
-export const languageList = Object.values(LANGUAGE_TYPES);
 
 export enum FIGLET_TYPES {
   "3D_DIAGONAL" = "3D Diagonal",
@@ -272,3 +269,64 @@ export enum FIGLET_TYPES {
   LINE_BLOCKS = "Line Blocks",
   LINUX = "Linux",
 }
+
+const LANGUAGE_TYPES = {
+  "Amharic": "am",
+  "Arabic": "ar",
+  "Basque": "eu",
+  "Bengali": "bn",
+  "English (UK)": "en-GB",
+  "Portuguese (Brazil)": "pt-BR",
+  "Bulgarian": "bg",
+  "Catalan": "ca",
+  "Cherokee": "chr",
+  "Croatian": "hr",
+  "Czech": "cs",
+  "Danish": "da",
+  "Dutch": "nl",
+  "English (US)": "en",
+  "Estonian": "et",
+  "Filipino": "fil",
+  "Finnish": "fi",
+  "French": "fr",
+  "German": "de",
+  "Greek": "el",
+  "Gujarati": "gu",
+  "Hebrew": "iw",
+  "Hindi": "hi",
+  "Hungarian": "hu",
+  "Icelandic": "is",
+  "Indonesian": "id",
+  "Italian": "it",
+  "Japanese": "ja",
+  "Kannada": "kn",
+  "Korean": "ko",
+  "Latvian": "lv",
+  "Lithuanian": "lt",
+  "Malay": "ms",
+  "Malayalam": "ml",
+  "Marathi": "mr",
+  "Norwegian": "no",
+  "Polish": "pl",
+  "Portuguese (Portugal)": "pt-PT",
+  "Romanian": "ro",
+  "Russian": "ru",
+  "Serbian": "sr",
+  "Chinese (PRC)": "zh-CN",
+  "Slovak": "sk",
+  "Slovenian": "sl",
+  "Spanish": "es",
+  "Swahili": "sw",
+  "Swedish": "sv",
+  "Tamil": "ta",
+  "Telugu": "te",
+  "Thai": "th",
+  "Chinese (Taiwan)": "zh-TW",
+  "Turkish": "tr",
+  "Urdu": "ur",
+  "Ukrainian": "uk",
+  "Vietnamese": "vi",
+  "Welsh": "cy"
+};
+
+export const languageList = Object.keys(LANGUAGE_TYPES);

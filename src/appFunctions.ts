@@ -13,10 +13,11 @@ import { animate } from "./utilities/chalk-animation.js";
 import { generateFigletText } from "./utilities/figlet.js";
 import { gradientText } from "./utilities/gradient.js";
 import { askQuestion } from "./utilities/inquirer.js";
+import { checkTextLength } from "./utilities/validations.js";
 
 export const welcome = async () => {
-  const welcomeTextFiglet = await generateFigletText(MESSAGES.WELCOME);
-  const welcomeTextGradient = gradientText(
+  const welcomeTextFiglet: string = await generateFigletText(MESSAGES.WELCOME);
+  const welcomeTextGradient: string = gradientText(
     welcomeTextFiglet,
     GRADIENT_TYPES.RAINBOW
   );
@@ -25,18 +26,22 @@ export const welcome = async () => {
 };
 
 export const collectUserData = async () => {
-  const userName = await askQuestion(MESSAGES.ASK_NAME, QUESTION_TYPES.INPUT);
+  const userName: string = await askQuestion(
+    MESSAGES.ASK_NAME,
+    QUESTION_TYPES.INPUT
+  );
+  checkTextLength(userName, 20);
   await animate(`Hi ${userName}`);
 };
 
 export const introToApp = () => {
-  const introMsgGradient = gradientText(MESSAGES.INTRO);
+  const introMsgGradient: string = gradientText(MESSAGES.INTRO);
   console.clear();
   console.log(introMsgGradient);
 };
 
 const selectModule = async () => {
-  const selectedModule = await askQuestion(
+  const selectedModule: string = await askQuestion(
     MESSAGES.MODULE_SELECTION,
     QUESTION_TYPES.LIST,
     moduleList
@@ -45,35 +50,50 @@ const selectModule = async () => {
 };
 
 export const handleModules = async () => {
-  const selectedModule = await selectModule();
+  const selectedModule: string = await selectModule();
 
   switch (selectedModule) {
     case MODULE_TYPES.TYPING_SPEED:
+      console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
       break;
 
     case MODULE_TYPES.TRANSLATOR:
       await languageTranslator();
-      await selectModule();
+      await handleModules();
       break;
 
     case MODULE_TYPES.WEATHER:
+      console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
+      await handleModules();
       break;
 
     case MODULE_TYPES.FIGLET:
+      console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
+      await handleModules();
       break;
 
     case MODULE_TYPES.TIC_TAC_TOE:
+      console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
+      await handleModules();
       break;
 
     case MODULE_TYPES.HANGMAN:
+      console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
+      await handleModules();
       break;
 
     case MODULE_TYPES.NOTIFICATION:
+      console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
+      await handleModules();
       break;
+
+    case MODULE_TYPES.EXIT:
+      await animate("Byeee 👋");
+      process.exit(1);
 
     case MODULE_TYPES.LINKEDIN:
       await openLinkedin();
-      await selectModule();
+      await handleModules();
       break;
 
     default:

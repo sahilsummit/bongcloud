@@ -13,6 +13,7 @@ import { animate } from "./utilities/chalk-animation.js";
 import { generateFigletText } from "./utilities/figlet.js";
 import { gradientText } from "./utilities/gradient.js";
 import { askQuestion } from "./utilities/inquirer.js";
+import MySpinner from "./utilities/spinner.js";
 import { checkTextLength } from "./utilities/validations.js";
 
 export const welcome = async () => {
@@ -54,7 +55,10 @@ export const handleModules = async () => {
 
   switch (selectedModule) {
     case MODULE_TYPES.TYPING_SPEED:
+      await MySpinner.start(MESSAGES.LOADING, 1);
+      MySpinner.success();
       console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
+      await handleModules();
       break;
 
     case MODULE_TYPES.TRANSLATOR:
@@ -63,26 +67,36 @@ export const handleModules = async () => {
       break;
 
     case MODULE_TYPES.WEATHER:
+      await MySpinner.start(MESSAGES.LOADING, 1);
+      MySpinner.success();
       console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
       await handleModules();
       break;
 
     case MODULE_TYPES.FIGLET:
+      await MySpinner.start(MESSAGES.LOADING, 1);
+      MySpinner.success();
       console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
       await handleModules();
       break;
 
     case MODULE_TYPES.TIC_TAC_TOE:
+      await MySpinner.start(MESSAGES.LOADING, 1);
+      MySpinner.success();
       console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
       await handleModules();
       break;
 
     case MODULE_TYPES.HANGMAN:
+      await MySpinner.start(MESSAGES.LOADING, 1);
+      MySpinner.success();
       console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
       await handleModules();
       break;
 
     case MODULE_TYPES.NOTIFICATION:
+      await MySpinner.start(MESSAGES.LOADING, 1);
+      MySpinner.success();
       console.log(gradientText(MESSAGES.STILL_IN_PROGRESS));
       await handleModules();
       break;

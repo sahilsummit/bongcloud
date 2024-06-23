@@ -8,7 +8,7 @@ export const animate = async (
   time: number = DEFAULT_SLEEP_TIME
 ): Promise<any> => {
   const animateFunction = chalkAnimation[design as ANIMATION_TYPES];
-  const animatedText = animateFunction(`${text} \n`);
+  const animatedText = animateFunction(`\n ${text}`);
   await sleep(time);
   animatedText.stop();
 };

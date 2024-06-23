@@ -48,6 +48,38 @@ export enum QUESTION_TYPES {
   EDITOR = "editor",
 }
 
+export const MESSAGES = {
+  WELCOME: "WELCOME  TO  BONGCLOUD",
+  RULER:
+    "____________________________________________________________________________________________________________________ \n ____________________________________________________________________________________________________________________",
+  ASK_NAME: "Your Name:",
+  INTRO: "🚀✨ Say hello to Bongcloud, your ultimate boredom buster! \n",
+  MODULE_SELECTION:
+    "🎁✨ Dive into our delightful menu and pick your favorite treat from the list below! \n",
+  LANGUAGE_SELECTION: "To which language you wanna translate?",
+  TEXT_TO_BE_TRANSLATTED: "Type in what you wanna translate..",
+};
+
+export const MODULE_TYPES = {
+  TYPING_SPEED: "Check your typing speed",
+  TRANSLATOR: "Translate your message",
+  WEATHER: "Check weather",
+  FIGLET: "Generate a designer text",
+  TIC_TAC_TOE: "Play tic-tac-toe",
+  HANGMAN: "Play hangman",
+  NOTIFICATION: "Send notification to the author",
+  LINKEDIN: "View the author's linkedin",
+};
+
+export const moduleList = Object.values(MODULE_TYPES);
+
+export const LANGUAGE_TYPES = {
+  HINDI: "Hindi",
+  PUNJABI: "Punjabi",
+};
+
+export const languageList = Object.values(LANGUAGE_TYPES);
+
 export enum FIGLET_TYPES {
   "3D_DIAGONAL" = "3D Diagonal",
   ALPHA = "Alpha",

@@ -4,8 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "npm run build && node dist/index.js"
+    "start": "tsc && node dist/index.js"
   },
   "bin": {
     "my-cli-toolkit": "dist/index.js"
@@ -27,6 +26,7 @@
     "gradient-string": "^2.0.2",
     "inquirer": "^9.2.23",
     "nanospinner": "^1.1.0",
+    "open": "^10.1.0",
     "typescript": "^5.5.2",
     "vite": "^5.3.1"
   }

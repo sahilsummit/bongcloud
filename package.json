@@ -1,6 +1,6 @@
 {
   "name": "bongcloud",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -13,6 +13,10 @@
   "author": "sahil-jaura",
   "license": "ISC",
   "devDependencies": {
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  },
+  "dependencies": {
     "@types/chalk": "^2.2.0",
     "@types/chalk-animation": "^1.6.3",
     "@types/figlet": "^1.5.8",
@@ -26,8 +30,6 @@
     "gradient-string": "^2.0.2",
     "inquirer": "^9.2.23",
     "nanospinner": "^1.1.0",
-    "open": "^10.1.0",
-    "typescript": "^5.5.2",
-    "vite": "^5.3.1"
+    "open": "^10.1.0"
   }
 }

@@ -6,9 +6,7 @@
   "scripts": {
     "start": "tsc && node dist/index.js"
   },
-  "bin": {
-    "my-cli-toolkit": "dist/index.js"
-  },
+  "bin": "dist/index.js",
   "type": "module",
   "keywords": [],
   "homepage": "https://github.com/sahilsummit/bongcloud#readme",
